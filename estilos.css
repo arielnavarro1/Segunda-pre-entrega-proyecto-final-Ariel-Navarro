@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0; 
+
+}
+
+body{ 
+  background: radial-gradient(ellipse at bottom, #5091DD 0%, #030617 100%);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.title h1{
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
+    text-transform: uppercase;
+}
+.conteiner{
+    background: rgb(248, 246, 246);
+    width: 90%;
+    max-width: 1000px;
+    margin:1.6em auto ;
+
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.conteiner-sedan{
+
+
+    width:90%;
+    max-width:1000px;
+    margin:1.6em auto ;
+
+    display:grid;
+    gap:1.6em;
+    grid-template-columns:repeat(5, 1fr);
+
+    
+}
+.conteiner > .header,
+.conteiner > .content,
+.conteiner > .sidebar,
+.conteiner > .div{
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000  ;
+}
+
+
+.conteiner .header {
+    grid-column: 1/6;
+    background: #1e272e;
+    color: #ffffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.header-sedan{
+    grid-column: 1/6;
+    background: #1e272e;
+    color: #ffffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.footer{
+    grid-column: 1/6;
+    background: #1e272e;
+    color: #ffffffff;
+    padding: 20px;
+    border: 1px solid #000 
+}
+
+
+
+.conteiner > .content{
+    grid-column: 1/4;
+}
+.content .article{
+    background: #808e90;
+    padding: 20px;
+    margin-top: 5px;
+    color: #dfe6e9;
+}
+.content .article h1,
+.content .article p{
+    padding: 18px;
+}
+
+.conteiner .sidebar{
+    grid-column: span 2;
+    background: #485460;
+    color: #ffffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.conteiner .sidebar img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.conteiner > .related-post{
+    background-image: url(https://i.pinimg.com/474x/f4/8f/d8/f48fd8750a085befe134a7db8f670e91.jpg);
+    color: #fff;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5 ease;
+
+
+}
+.conteiner > .related-post:hover{
+    cursor: pointer;
+    color: #000;
+    background: #ffffffff;
+}
+.conteiner > .cards-sedan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        text-align: center;
+    }
+
+    .conteiner .content{
+        grid-column: 1/-1;
+    }
+    .conteiner .sidebar{
+        grid-column: 1/6;
+    }
+    .conteiner .related-post{
+        grid-column: 1/-1;
+    }
+}
